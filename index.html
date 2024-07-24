@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Manager : Manage all tyor task in one place</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div id="createTask" class="box">
+            <span class="box-heading">
+                <h1>Create New Task</h1>
+            </span>
+            <form class="content">
+                <label for="title">Title: </label>
+                <input type="text" placeholder="Type here..." value="" id="title" name="taskHeading"
+                    autocomplete="off"><br><br>
+                <label for="taskDesc">Description: </label>
+                <textarea id="taskDesc" name="taskDesc" rows="3" cols="40" placeholder="Type here..."
+                    style="width:100%"></textarea><br><br>
+                <label for="dueDate-Time">Due Date: </label>
+                <input type="datetime-local" placeholder="Type here..." value="" id="dueDate-Time" name="dueDate-Time"
+                    autocomplete="off"><br><br>
+
+                <button id="createBtn" class="formBtn">Create Task</button>
+                <button id="resetBtn" class="formBtn disabled">Reset</button>
+            </form>
+            <div id="msg">
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="pendingTasks" class="box">
+            <div class="box-heading">
+                <h1>Pending Tasks</h1>
+            </div>
+            <div class="container" id="penContainer">
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="completedTasks" class="box">
+            <div class="box-heading">
+                <h1>Completed Tasks</h1>
+            </div>
+            <div class="container" id="compContainer">
+            </div>
+    </section>
+
+    <section>
+        <div id="deletedTasks" class="box">
+            <div class="box-heading">
+                <h1>Deleted Tasks</h1>
+            </div>
+            <div class="container" id="delContainer">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

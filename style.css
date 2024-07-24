@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+hr {
+  background-color: black;
+  height: 1px;
+  border: 0;
+  width: 95%;
+  margin: 5px auto;
+}
+body {
+  background: #d4b483;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 3rem;
+}
+section {
+  max-height: 55%;
+  min-width: 20%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.box {
+  border-radius: 25px 0 25px 25px;
+  height: 27rem;
+  width: 25rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #7563df;
+  align-items: center;
+}
+.box:hover,
+.box:active {
+  transform: scale(1.1);
+  transition: all linear 0.2s;
+}
+.box-heading {
+  padding: 0.5rem 0.2rem;
+  text-align: center;
+  height: 4rem;
+}
+.box-heading h1 {
+  font-size: 2.5rem;
+}
+.content {
+  padding: 1rem;
+}
+form label {
+  display: block;
+  padding-bottom: 0.4rem;
+}
+form input,
+textarea {
+  padding: 5px 8px;
+  color: black;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.formBtn {
+  width: 8rem;
+  border-radius: 10px;
+  padding: 6px;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+#createBtn {
+  background-color: #d4f385;
+  border: 2px solid #5a6d29;
+  opacity: 0.5;
+  cursor: pointer;
+}
+#resetBtn {
+  background-color: #d11313;
+  border: 2px solid #6f0707;
+  color: white;
+  cursor: pointer;
+}
+
+.disabled {
+  color: #ffffff !important;
+  cursor: not-allowed !important;
+  background-color: #837f7f !important;
+  border: 1px solid #000000 !important;
+}
+#msg {
+  background-color: #27252f;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* sections CSS Start */
+#createTask {
+  background-color: #8a9bd0;
+  box-shadow: 0px 0px 15px #0524c1;
+  color: black;
+  font-weight: 700;
+}
+#createTask:hover,
+#createTask:active {
+  background-color: #9caee9;
+}
+
+#pendingTasks {
+  background-color: #b8e0e0;
+}
+#pendingTasks h1 {
+  color: #093d6beb;
+}
+#pendingTasks:hover,
+#pendingTasks:active {
+  background-color: #cbf5f5;
+}
+
+#completedTasks {
+  background-color: #c2f9b6;
+}
+#completedTasks h1 {
+  color: #35a521;
+}
+#completedTasks:hover,
+#completedTasks:active {
+  background-color: #d1ffc8;
+}
+#deletedTasks {
+  background-color: #f9bfc2;
+}
+#deletedTasks h1 {
+  color: #c70202;
+}
+#deletedTasks:hover,
+#deletedTasks:active {
+  background-color: #f6ced0;
+}
+/* sections CSS End */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden; /* controls overflow of container*/
+}
+.tasks {
+  height: 20%;
+  width: 100%;
+  padding: 4px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.tasks h4 {
+  padding: 5px;
+}
+.taskContent {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+  flex-basis: 75%;
+  padding: 0 7px;
+  border-left: 2px dashed white;
+  border-right: 2px dashed white;
+}
+.taskContent .bold-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.taskContent span {
+  font-weight: 500;
+}
+#taskDesc {
+  display: inline-block;
+  width: 280px;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: auto;
+}
+
+.taskBtn {
+  padding: 0 5px;
+  flex-basis: 20%;
+  text-align: center;
+}
+.taskBtn i {
+  margin-right: 5px;
+}
+
+.penTasks {
+  background-color: #92cac8;
+}
+.comTasks {
+  background-color: #8dbb85;
+  justify-content: space-evenly !important;
+}
+.delTasks {
+  background-color: #d9a9ac;
+  justify-content: space-evenly !important;
+}
+
+.taskItem {
+  width: 85%;
+  padding: 5px;
+  border: 2px solid #c6180b;
+  height: 10%;
+  max-height: 15%;
+}
+.btn {
+  height: 10px;
+  width: 10px;
+}
+.nearExpiry {
+  background-color: #ffc2c2;
+  color: red;
+}
+.attentionReq {
+  background-color: #e5ff00;
+  color: black;
+}
